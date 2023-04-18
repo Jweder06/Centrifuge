@@ -1,6 +1,6 @@
-# CPyProjectTemplate
+# Centrifuge
 Put a description for your project here!
-This repo is a template VS code project for CircuitPython projects that automatically uploads your code to the board when you press F5. Requires F5Anything extension.
+This is a simple centrifuge using pid to control the speed
 ## Use
 ### Every new project:
 1. Make a GitHub account if you don't have one with your normal school credentials and sign into it.
