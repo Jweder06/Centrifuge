@@ -12,6 +12,7 @@ Most of the planning was done in a simple MS paint where the layout of the proje
 This was some of the simplest cad work I have done and required simple mounts and a simple acrylic box that was made in less than a week of CAD work. The goal was to make a simple streamlined design that would allow for easy construction. One element of that is that the walls are independent of the base except for the brackets making it easy to wire test and then place the walls. If the parts were integrated into the walls the assembly would be much more difficult.
 ## Vials and holder
 ![image](https://user-images.githubusercontent.com/112961442/234093672-1a8a80b8-5776-44bb-97e3-00ad02e57296.png)
-The vials where made with 3d lines, filled into a surface and the cut to make the vial. That was then transformed into the holder and booleand into the cone to make the vial holder.
+
+The vials where made with 3d lines, filled into a surface and the cut to make the vial. That was then transformed into the holder and booleand into the cone to make the vial holder.Finaly the part was lightened to make it cheaper to print and easier to spin up to high speed.
 
 ## Electonics and placement
