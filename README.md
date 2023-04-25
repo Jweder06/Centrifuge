@@ -13,6 +13,6 @@ This was some of the simplest cad work I have done and required simple mounts an
 ## Vials and holder
 ![image](https://user-images.githubusercontent.com/112961442/234093672-1a8a80b8-5776-44bb-97e3-00ad02e57296.png)
 
-The vials where made with 3d lines, filled into a surface and the cut to make the vial. That was then transformed into the holder and booleand into the cone to make the vial holder.Finaly the part was lightened to make it cheaper to print and easier to spin up to high speed.
+The vials where made with 3d lines, filled into a surface and the cut to make the vial. That was then transformed into the holder and booleand into the cone to make the vial holder.Finaly the part was lightened to make it cheaper to print and easier to spin up to high speed becasue of a reduced weight.
 
 ## Electonics and placement
