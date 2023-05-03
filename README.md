@@ -2,6 +2,7 @@
 This is a simple centrifuge using PID to control the speed of the centrifuge. The goal is to be able to get the PID to get to a certin speed and if time allows a rotary encoder will be used to change the goal speed
 ## Planing
 Most of the planning was done in a simple MS paint where the layout of the project was set and the functions of each sensor was thought out.
+![image](https://user-images.githubusercontent.com/112961442/235988539-00ad7e6e-b546-4868-ab20-6a5bdbae56b4.png)
 ### Schedule 
 1. First 2 weeks will be cad and start of construction.
 2. Third week will be finishing construction and starting code.
