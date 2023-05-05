@@ -17,3 +17,4 @@ This was some of the simplest cad work I have done and required simple mounts an
 The vials where made with 3d lines, filled into a surface and the cut to make the vial. That was then transformed into the holder and booleand into the cone to make the vial holder.Finaly the part was lightened to make it cheaper to print and easier to spin up to high speed becasue of a reduced weight.
 
 ## Electonics and placement
+<img src="https://cdn-learn.adafruit.com/assets/assets/000/036/861/medium800/adafruit_products_drv8833demo.png?1477517856" alt="Arduino Usage | Adafruit DRV8833 DC/Stepper Motor Driver Breakout Board |  Adafruit Learning System"/>![image](https://user-images.githubusercontent.com/112961442/236470311-b8f9e0b9-ef88-4ae0-98ef-ff99ea000287.png)
