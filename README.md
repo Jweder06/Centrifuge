@@ -26,10 +26,5 @@ Stepper issue
 drillling manual holes
 Wobble issue:
 
-https://github.com/Jweder06/Centrifuge/assets/112961442/dee91e6d-2b76-4aa6-bb16-6c7637bfbfb9
-
-
-
-
-
+https://github.com/Jweder06/Centrifuge/assets/112961442/a128f269-8171-4abb-869b-58f02e926046
 
