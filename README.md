@@ -18,5 +18,16 @@ The vials where made with 3d lines, filled into a surface and the cut to make th
 
 ## Electonics and placement
 ![image](https://github.com/Jweder06/Paper-air-plane-launcher/assets/112961442/88a62308-7464-4afd-855b-c6805dd8ad9e)
-
+Making space 
+Wiering
 Use import pull up for button 
+## Construction
+Stepper issue
+drillling manual holes
+Wobble issue:https://github.com/Jweder06/Centrifuge/assets/112961442/dee91e6d-2b76-4aa6-bb16-6c7637bfbfb9
+
+
+
+
+
+
