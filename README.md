@@ -17,8 +17,6 @@ This was some of the simplest cad work I have done and required simple mounts an
 The vials where made with 3d lines, filled into a surface and the cut to make the vial. That was then transformed into the holder and booleand into the cone to make the vial holder.Finaly the part was lightened to make it cheaper to print and easier to spin up to high speed becasue of a reduced weight.
 
 ## Electonics and placement
-<img src="https://user-images.githubusercontent.com/112961442/236470311-b8f9e0b9-ef88-4ae0-98ef-ff99ea000287.png" alt="image"/>
-![image](https://user-images.githubusercontent.com/112961442/236893396-dd29db23-5f42-482f-acd0-c983642e0922.png)
 ![image](https://github.com/Jweder06/Paper-air-plane-launcher/assets/112961442/88a62308-7464-4afd-855b-c6805dd8ad9e)
 
 Use import pull up for button 
