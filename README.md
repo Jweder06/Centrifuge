@@ -27,4 +27,5 @@ drillling manual holes
 Wobble issue:
 
 https://github.com/Jweder06/Centrifuge/assets/112961442/a128f269-8171-4abb-869b-58f02e926046
+![IMG_0578 1](https://github.com/Jweder06/circuitpython-/assets/112961442/45038f01-4a5e-4ac0-aa86-4ca7f8c2379a)
 
