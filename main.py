@@ -1,4 +1,4 @@
-from time import sleep
+from time import sleep      #importing Libraries
 from PID_CPY import PID
 import time
 import math
@@ -7,15 +7,15 @@ import digitalio
 from digitalio import DigitalInOut, Direction, Pull
 from pwmio import PWMOut
 from adafruit_motor import motor as Motor
-pid = PID(-1, -0.5, -0.15, setpoint= 1.5 )  #PID values
-pid.output_limits = (.2,1)
-throttle = .2                
+pid = PID(-1, -0.5, -0.15, setpoint= 1.5 )  #Setting PID values
+pid.output_limits = (.2,1)      #Limiting output values
+throttle = .2                #Seting starting throttle
 led = digitalio.DigitalInOut(board.D4)
 led.direction = digitalio.Direction.OUTPUT
 photoI = digitalio.DigitalInOut(board.D6)
 photoI.direction = digitalio.Direction.INPUT
 photoI.pull = digitalio.Pull.UP
-Bvalue = False
+Bvalue = False      #declaring variables
 AverageT = 0
 Period= 0
 Tcount = 0
@@ -24,7 +24,7 @@ Diffrence = 0
 Currenttime = 0
 Pasttime = 0
 Interupts = 0
-drv8833_ain1 = PWMOut(board.D8, frequency=50)
+drv8833_ain1 = PWMOut(board.D8, frequency=50)       #DRV8833
 drv8833_ain2 = PWMOut(board.D9, frequency=50)
 drv8833_bin1 = PWMOut(board.D12, frequency=50)
 drv8833_bin2 = PWMOut(board.D11, frequency=50)
@@ -39,34 +39,31 @@ buttonstate="not pressed"
 while True:
     if button_a.value == 0 and buttonstate == "not pressed": 
         Bvalue = not Bvalue
-        buttonstate = "pressed"
+        buttonstate = "pressed"     #debounce for button
     elif button_a.value == 1: 
-        buttonstate = "not pressed"
+        buttonstate = "not pressed"     #debounce for button
     if Bvalue == True:
-        motor_a.throttle = throttle
-        led.value = True
+        motor_a.throttle = throttle     #motor on
+        led.value = True       #Power LED ON          
     
     elif Bvalue == False:
         motor_a.throttle = 0    
-        led.value = False                    
+        led.value = False       #Power LED Off                    
     Truetime = time.monotonic()
-    if photoI.value == True and Processed == True:       # Encoder
-        Currenttime = Truetime
-        Diffrence = Currenttime - Pasttime
-        Pasttime = Currenttime
-        Processed = False
-        Tcount = Tcount + 1
+  if photoI.value == True and Processed == True:       # Encoder
+        Currenttime = Truetime      #Records the current interupt time
+        Diffrence = Currenttime - Pasttime      #finds the diffrence
+        Pasttime = Currenttime      #It knows current interupt has been recored so it sets current to past interupt
+        Processed = False       #debounce
+        Tcount = Tcount + 1     #counts the cycles for average
     if photoI.value == False:
-        AverageT = AverageT + Diffrence
+        AverageT = AverageT + Diffrence     #Adds the difrence up 5 times
         Processed = True
-    if Tcount == 1:
-        AverageT = AverageT/1                           #Avarge count and print
-       # print("Perod:", Period )
-        Tcount = 0
-        AverageT = Diffrence
-      #  print("throttle:", throttle )
-       # print("Perod:", Period )
-    Period= AverageT * 3
+    if Tcount == 5:
+        AverageT = AverageT/6       #Averages the counted total
+        Tcount = 1                  # Rests count
+        AverageT = Diffrence        #Rests average for the next count
+    Period= AverageT * 3        #Setting period
     throttle = pid(Period)
     print((throttle,))
     print((Period,))
