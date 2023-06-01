@@ -13,7 +13,7 @@ Most of the planning was done in a simple MS paint where the layout of the proje
 
 <img src="https://github.com/Jweder06/Centrifuge/assets/112961442/e35dd01f-ac83-45e9-8f0b-2598dc76df01" width="700">
 
-## CAD
+# CAD
 
 This was some of the simplest cad work I have done and required simple mounts and a simple acrylic box that was made in less than a week of CAD work. The goal was to make a simple streamlined design that would allow for easy construction. One element of that is that the walls are independent of the base except for the brackets making it easy to wire test and then place the walls. If the parts were integrated into the walls the assembly would be much more difficult.
 
@@ -42,7 +42,7 @@ This is another example of me trying to standardize my designs across the board.
 
 For my design, I tried to keep in mind the difficulties of construction and so I made sure to keep lots of space for wiring and electronics. I knew that a DRV8833 requires direct Arduino pin access so I placed a breadboard next to the Arduino to make sure it fit.
 
-## Construction
+# Construction
 
 ### Electonics and Wiring
 
@@ -77,8 +77,11 @@ Before I replaced the bottom plate I attempted to drill new holes for the TT mot
 <img src="https://github.com/Jweder06/Paper-air-plane-launcher/assets/112961442/6813e4b9-9d72-4af4-9a39-600d7eb20606" width="700">
 
  The photo interrupter had by far the largest issue its counting in the encoder code was inconsistent at high speeds and it would detect part going through it but the code wouldn't have enough time to count it.  because the main goal of the project was to go as fast as possible but still being PID  meant that I couldn't compromise on the speed therefore I had to do a lot of testing on how to allow the photo interrupter to still detect being interrupted even at high speeds.  this was done by changing the part that goes through the photo interrupter and making it bigger. This allows the code to run while the photo interrupter is still interrupted meaning we can accurately count.
+ 
+### Bill of matirials 
+<img src="https://github.com/Jweder06/Centrifuge/assets/112961442/876aa3f5-f8fd-490b-8a72-27315373aa3e" width="700">
 
-## Code
+# Code
 ```python
 #type: ignore
 from time import sleep      #importing Libraries
@@ -221,7 +224,7 @@ This section of code counts the diffrence 5 times and then devides them by 5 get
         print("throttle:", throttle )
         print("RPM:", RPM )
         print((throttle,RPM,.8))        #Plotting
-    if AverageT == 0:
+    if  AverageT == 0:
         AverageT =.1
 ```
 ## Reflection
