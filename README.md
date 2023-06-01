@@ -80,6 +80,7 @@ Before I replaced the bottom plate I attempted to drill new holes for the TT mot
 
 ## Code
 ```python
+#type: ignore
 from time import sleep      #importing Libraries
 from PID_CPY import PID
 import time
@@ -89,7 +90,7 @@ import digitalio
 from digitalio import DigitalInOut, Direction, Pull
 from pwmio import PWMOut
 from adafruit_motor import motor as Motor
-pid = PID(-1, -0.5, -0.15, setpoint= 1.5 )  #Setting PID values
+pid = PID(-1, -0.5, -0.15, setpoint= .8 )  #Setting PID values
 pid.output_limits = (.2,1)      #Limiting output values
 throttle = .2                #Seting starting throttle
 led = digitalio.DigitalInOut(board.D4)
@@ -99,7 +100,7 @@ photoI.direction = digitalio.Direction.INPUT
 photoI.pull = digitalio.Pull.UP
 Bvalue = False      #declaring variables
 AverageT = 0
-Period= 0
+RPM= 0
 Tcount = 0
 Processed = True
 Diffrence = 0
@@ -125,14 +126,14 @@ while True:
     elif button_a.value == 1: 
         buttonstate = "not pressed"     #debounce for button
     if Bvalue == True:
-        motor_a.throttle = throttle     #motor on
+        motor_a.throttle = 1 #throttle     #motor on
         led.value = True       #Power LED ON          
     
     elif Bvalue == False:
         motor_a.throttle = 0    
         led.value = False       #Power LED Off                    
     Truetime = time.monotonic()
-  if photoI.value == True and Processed == True:       # Encoder
+    if photoI.value == True and Processed == True:       # Encoder
         Currenttime = Truetime      #Records the current interupt time
         Diffrence = Currenttime - Pasttime      #finds the diffrence
         Pasttime = Currenttime      #It knows current interupt has been recored so it sets current to past interupt
@@ -143,12 +144,16 @@ while True:
         Processed = True
     if Tcount == 5:
         AverageT = AverageT/6       #Averages the counted total
-        Tcount = 1                  # Rests count
+       # print("Perod:", RPM )
+        Tcount = 0      # Rests count
         AverageT = Diffrence        #Rests average for the next count
-    Period= AverageT * 3
-    throttle = pid(Period)
-    print((throttle,))
-    print((Period,))    #Plotting
+        print("throttle:", throttle )
+        print("RPM:", RPM )
+        print((throttle,RPM,.8))        #Plotting
+    if AverageT == 0:
+        AverageT =.1
+    RPM=60/(AverageT * 3)
+    throttle = pid(RPM)     #PID
 
 ```
 ### Debounce button
@@ -211,8 +216,12 @@ This section of code counts the diffrence 5 times and then devides them by 5 get
 ```python
     if Tcount == 5:
         AverageT = AverageT/6       #Averages the counted total
-        Tcount = 1                  # Rests count
+        Tcount = 0      # Rests count
         AverageT = Diffrence        #Rests average for the next count
-    Period= AverageT * 3        #Setting period
+        print("throttle:", throttle )
+        print("RPM:", RPM )
+        print((throttle,RPM,.8))        #Plotting
+    if AverageT == 0:
+        AverageT =.1
 ```
 ## Reflection

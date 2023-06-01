@@ -51,7 +51,7 @@ while True:
         motor_a.throttle = 0    
         led.value = False       #Power LED Off                    
     Truetime = time.monotonic()
-  if photoI.value == True and Processed == True:       # Encoder
+    if photoI.value == True and Processed == True:       # Encoder
         Currenttime = Truetime      #Records the current interupt time
         Diffrence = Currenttime - Pasttime      #finds the diffrence
         Pasttime = Currenttime      #It knows current interupt has been recored so it sets current to past interupt
@@ -61,13 +61,13 @@ while True:
         AverageT = AverageT + Diffrence     #Adds the difrence up 5 times
         Processed = True
     if Tcount == 5:
-        AverageT = AverageT/6                           #Avarge count and print
+        AverageT = AverageT/6       #Averages the counted total
        # print("Perod:", RPM )
-        Tcount = 0
-        AverageT = Diffrence
+        Tcount = 0      # Rests count
+        AverageT = Diffrence        #Rests average for the next count
         print("throttle:", throttle )
         print("RPM:", RPM )
-        print((throttle,RPM,.8))
+        print((throttle,RPM,.8))        #Plotting
     if AverageT == 0:
         AverageT =.1
     RPM=60/(AverageT * 3)
