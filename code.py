@@ -1,3 +1,4 @@
+#type: ignore
 from time import sleep
 from PID_CPY import PID
 import time

@@ -1,3 +1,4 @@
+#type: ignore
 from time import sleep
 from PID_CPY import PID
 import time
@@ -7,7 +8,7 @@ import digitalio
 from digitalio import DigitalInOut, Direction, Pull
 from pwmio import PWMOut
 from adafruit_motor import motor as Motor
-pid = PID(-1, -0.5, -0.15, setpoint= 1.5 )  #PID values
+pid = PID(-1, -0.5, -0.15, setpoint= .8 )  #PID values
 pid.output_limits = (.2,1)
 throttle = .2                
 led = digitalio.DigitalInOut(board.D4)
@@ -17,7 +18,7 @@ photoI.direction = digitalio.Direction.INPUT
 photoI.pull = digitalio.Pull.UP
 Bvalue = False
 AverageT = 0
-Period= 0
+RPM= 0
 Tcount = 0
 Processed = True
 Diffrence = 0
@@ -43,7 +44,7 @@ while True:
     elif button_a.value == 1: 
         buttonstate = "not pressed"
     if Bvalue == True:
-        motor_a.throttle = throttle
+        motor_a.throttle = 1 #throttle
         led.value = True
     
     elif Bvalue == False:
@@ -59,14 +60,15 @@ while True:
     if photoI.value == False:
         AverageT = AverageT + Diffrence
         Processed = True
-    if Tcount == 1:
-        AverageT = AverageT/1                           #Avarge count and print
-       # print("Perod:", Period )
+    if Tcount == 5:
+        AverageT = AverageT/6                           #Avarge count and print
+       # print("Perod:", RPM )
         Tcount = 0
         AverageT = Diffrence
-      #  print("throttle:", throttle )
-       # print("Perod:", Period )
-    Period= AverageT * 3
-    throttle = pid(Period)
-    print((throttle,))
-    print((Period,))
+        print("throttle:", throttle )
+        print("RPM:", RPM )
+        print((throttle,RPM,.8))
+    if AverageT == 0:
+        AverageT =.1
+    RPM=60/(AverageT * 3)
+    throttle = pid(RPM)
