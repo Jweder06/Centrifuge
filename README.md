@@ -13,9 +13,10 @@ Most of the planning was done in a simple MS paint where the layout of the proje
 
 <img src="https://github.com/Jweder06/Centrifuge/assets/112961442/e35dd01f-ac83-45e9-8f0b-2598dc76df01" width="700">
 
-<img src="https://github.com/Jweder06/Centrifuge/assets/112961442/7989c4ea-bb1d-4536-8126-3188b0f3ec00" width="400">
+<img src="https://github.com/Jweder06/Centrifuge/assets/112961442/e9e7c87b-9479-4237-ba84-b6ccf2820ac9" width="400"> 
 
 # CAD
+
 https://cvilleschools.onshape.com/documents/14cd3189dba3e8f19700045c/w/aa40a4c4bcfc04fb935ae4f6/e/0377bc9ccd1a3051eb0eb9a7?renderMode=0&uiState=6479f1f7d061192a0c3c4185
 This was some of the simplest cad work I have done and required simple mounts and a simple acrylic box that was made in less than a week of CAD work. The goal was to make a simple streamlined design that would allow for easy construction. One element of that is that the walls are independent of the base except for the brackets making it easy to wire test and then place the walls. If the parts were integrated into the walls the assembly would be much more difficult.
 
