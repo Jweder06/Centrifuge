@@ -13,8 +13,10 @@ Most of the planning was done in a simple MS paint where the layout of the proje
 
 <img src="https://github.com/Jweder06/Centrifuge/assets/112961442/e35dd01f-ac83-45e9-8f0b-2598dc76df01" width="700">
 
-# CAD
+<img src="https://github.com/Jweder06/Centrifuge/assets/112961442/7989c4ea-bb1d-4536-8126-3188b0f3ec00" width="400">
 
+# CAD
+https://cvilleschools.onshape.com/documents/14cd3189dba3e8f19700045c/w/aa40a4c4bcfc04fb935ae4f6/e/0377bc9ccd1a3051eb0eb9a7?renderMode=0&uiState=6479f1f7d061192a0c3c4185
 This was some of the simplest cad work I have done and required simple mounts and a simple acrylic box that was made in less than a week of CAD work. The goal was to make a simple streamlined design that would allow for easy construction. One element of that is that the walls are independent of the base except for the brackets making it easy to wire test and then place the walls. If the parts were integrated into the walls the assembly would be much more difficult.
 
 ### Vials and holder
@@ -227,4 +229,11 @@ This section of code counts the diffrence 5 times and then devides them by 5 get
     if  AverageT == 0:
         AverageT =.1
 ```
-## Reflection
+## Final Project
+
+(instert video here)
+
+The final project was a success the PID worked mostly, with a semi oscillating PID and a working control system and well-costructed box
+
+# Reflection
+This project taught me an incredible amount, I went from being completely Python-incompetent to being semi-competent. I have to attribute this growth to all the help I received from my teachers and classmates(Yes even Graham. G). I was able to code my own encoder, debounced button, and even PID. I now realized that I learned so much because I didn't take the easy route of copypasta, I tried to code it myself learning a lot on the way. I also applied a few of the time management skills I learned in the last project making the project simple and implementing a lot of planning structures making it easier to finish documentation and my project simultaneously. I think what I need to work on is communication, I wanted a partner and really needed one but I went down the flawed path of solo projects The place where all unfinished projects live) wich harmed y potential for an even more polished project.
