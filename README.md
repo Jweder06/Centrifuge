@@ -235,8 +235,7 @@ This section of code counts the difference 5 times and then divides them by 5 ge
         AverageT =.1
 ```
 ## Final Project
-
-(insert video here)
+https://github.com/Jweder06/Centrifuge/assets/112961442/cbdc5780-1575-48a5-93fe-9d67e0a22716
 
 The final project was a success the PID worked mostly, with a semi-oscillating PID and a working control system, and a well-constructed box
 
