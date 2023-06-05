@@ -11,6 +11,7 @@ Most of the planning was done in a simple MS Paint where the layout of the proje
 ###  Criteria and constraints
 
 <img src="https://github.com/Jweder06/Centrifuge/assets/112961442/add8790e-5ee0-443b-9df8-576d97f23839" width="700">
+
 ### Schedule 
 
 <img src="https://github.com/Jweder06/Centrifuge/assets/112961442/e35dd01f-ac83-45e9-8f0b-2598dc76df01" width="700">
