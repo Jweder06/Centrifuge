@@ -12,11 +12,11 @@ pid = PID(-1, -0.5, -0.15, setpoint= .8 )  #Setting PID values
 pid.output_limits = (.2,1)      #Limiting output values
 throttle = .2                #Seting starting throttle
 led = digitalio.DigitalInOut(board.D4)
-led.direction = digitalio.Direction.OUTPUT
-photoI = digitalio.DigitalInOut(board.D6)
+led.direction = digitalio.Direction.OUTPUT      #LED declaration  
+photoI = digitalio.DigitalInOut(board.D6)       #Photointerupter pin declaration and setup
 photoI.direction = digitalio.Direction.INPUT
 photoI.pull = digitalio.Pull.UP
-Bvalue = False      #declaring variables
+Bvalue = False      #declaring variables-
 AverageT = 0
 RPM= 0
 Tcount = 0
@@ -24,16 +24,16 @@ Processed = True
 Diffrence = 0
 Currenttime = 0
 Pasttime = 0
-Interupts = 0
-drv8833_ain1 = PWMOut(board.D8, frequency=50)       #DRV8833
+Interupts = 0             #declaring variables-
+drv8833_ain1 = PWMOut(board.D8, frequency=50)   #DRV8833 input pin conction declaration
 drv8833_ain2 = PWMOut(board.D9, frequency=50)
 drv8833_bin1 = PWMOut(board.D12, frequency=50)
 drv8833_bin2 = PWMOut(board.D11, frequency=50)
-button_a = DigitalInOut(board.D7)
+button_a = DigitalInOut(board.D7)       #Declares button a pin number
 drv8833_sleep = DigitalInOut(board.D5)
-motor_a = Motor.DCMotor(drv8833_ain1, drv8833_ain2)
+motor_a = Motor.DCMotor(drv8833_ain1, drv8833_ain2) 
 button_a.direction = Direction.INPUT
-button_a.pull = Pull.UP
+button_a.pull = Pull.UP     #Declares button pull direction
 drv8833_sleep.direction = Direction.OUTPUT
 drv8833_sleep.value = True                                # enable (turn on) the motor driver
 buttonstate="not pressed"
@@ -46,7 +46,6 @@ while True:
     if Bvalue == True:
         motor_a.throttle = 1 #throttle     #motor on
         led.value = True       #Power LED ON          
-    
     elif Bvalue == False:
         motor_a.throttle = 0    
         led.value = False       #Power LED Off                    
@@ -71,4 +70,4 @@ while True:
     if AverageT == 0:
         AverageT =.1
     RPM=60/(AverageT * 3)
-    throttle = pid(RPM)
+    throttle = pid(RPM)     #PID
