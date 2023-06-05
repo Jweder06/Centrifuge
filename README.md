@@ -235,9 +235,10 @@ This section of code counts the difference 5 times and then divides them by 5 ge
         AverageT =.1
 ```
 ## Final Project
-https://github.com/Jweder06/Centrifuge/assets/112961442/cbdc5780-1575-48a5-93fe-9d67e0a22716
 
-The final project was a success the PID worked mostly, with a semi-oscillating PID and a working control system, and a well-constructed box
+[Final video link](https://github.com/Jweder06/Centrifuge/assets/112961442/1559a0ad-8240-4540-b415-861074345e21)
+
+The final project was a success the PID worked mostly, with a semi-oscillating PID and a working control system, and a well-constructed box.(Importing videos has broken)
 
 # Reflection
 This project taught me an incredible amount, I went from being completely Python-incompetent to being semi-competent. I have to attribute this growth to all the help I received from my teachers and classmates(Yes even Graham. G). I was able to code my own encoder, debounced button, and even PID. I now realized that I learned so much because I didn't take the easy route of copypasta, I tried to code it myself learning a lot on the way. I also applied a few of the time management skills I learned in the last project making the project simple and implementing a lot of planning structures making it easier to finish documentation and my project simultaneously. I think what I need to work on is communication, I wanted a partner and really needed one but I went down the flawed path of solo projects The place where all unfinished projects live) which harmed y potential for an even more polished project.
