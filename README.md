@@ -62,6 +62,7 @@ For my design, I tried to keep in mind the difficulties of construction and so I
 This is a wiring diagram made on frizing for the circuit of the entire centrifuge it includes everything needed for the project. I made this before wired my project and used it as a reference although I didn't copy exact pin numbers.
 
 <img src="https://github.com/Jweder06/Paper-air-plane-launcher/assets/112961442/c4e738bb-f499-446f-b62f-294b7545bca9" width="700">
+
 Real-life circut image
 
 ### Redoing the Wiring
